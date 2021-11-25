@@ -30,10 +30,8 @@ add_action( 'admin_init', 'check_some_other_plugin' );
 
 define( 'AO_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 
-require_once AO_PLUGIN_PATH . 'class-shortcode.php';
+require_once AO_PLUGIN_PATH . 'includes/class-shortcode.php';
+require_once AO_PLUGIN_PATH . 'includes/class-tinymce.php';
 
-if ( is_admin() ) {
-	require_once AO_PLUGIN_PATH . 'class-editor.php';
-}
-
-$anchors_only = new Shortcode();
+$anchors = new Shortcode();
+$editor  = new TinyMCE();
