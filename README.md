@@ -25,7 +25,7 @@ mit dem Plugin eingefügt wurden, im Frontend ausgegeben. Da hierdurch die
 gesetzten Anker verloren gehen, funktioniert auch eine interne Verlinkung
 nicht mehr.
 
-Dieses Plugin redert vorhandene Shortcodes im Frontend wieder als Anker,
+Dieses Plugin rendert vorhandene Shortcodes im Frontend wieder als Anker,
 verwendet aber für die Scroll-Animation kein JavaScript, sondern eine kurze
 CSS-Regel, die sich nicht auf die Performance der Webseiten auswirkt.
 
