@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Anchors Only
  * Plugin URI:      PLUGIN SITE HERE
- * Description:     Ersetze <em>Scroll to Anchor</em> und zeige nur die Anker.
+ * Description:     Ersetzt <em>Scroll to Anchor</em> und zeigt nur die Anker.
  * Author:          Bego Mario Garde
  * Author URI:      https://pixolin.de
  * Version:         0.1.0
@@ -20,12 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @return void
  */
-function check_some_other_plugin() {
-	if ( ! is_plugin_active( 'scroll-to-anchor/scroll-to-anchor.php' ) ) {
 
-	}
-}
-add_action( 'admin_init', 'check_some_other_plugin' );
 
 
 define( 'AO_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
@@ -33,5 +28,10 @@ define( 'AO_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 require_once AO_PLUGIN_PATH . 'includes/class-shortcode.php';
 require_once AO_PLUGIN_PATH . 'includes/class-tinymce.php';
 
-$anchors = new Shortcode();
-$editor  = new TinyMCE();
+function check_some_other_plugin() {
+	if ( ! is_plugin_active( 'scroll-to-anchor/scroll-to-anchor.php' ) ) {
+		$anchors = new Shortcode();
+		$editor  = new TinyMCE();
+	}
+}
+add_action( 'admin_init', 'check_some_other_plugin' );

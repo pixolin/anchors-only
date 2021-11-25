@@ -34,7 +34,13 @@ class Shortcode {
 	}
 
 	public function ao_style() {
-		wp_register_style( 'aoStylesheet', plugins_url( '../css/ao-style.css', __FILE__ ), false, '0.1.0' );
-		wp_enqueue_style( 'aoStylesheet' );
+		$out  = '<style id="anchors-only">';
+		$out .= 'html { scroll-behavior: smooth; } ';
+		$out .= '@media (prefers-reduced-motion: reduce) {
+		html { scroll-behavior: auto; }
+		}';
+		$out .= '</style>';
+
+		echo $out;
 	}
 }
