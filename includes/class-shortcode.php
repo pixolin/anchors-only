@@ -5,7 +5,7 @@
 class Shortcode {
 	public function __construct() {
 		add_shortcode( 'sta_anchor', array( $this, 'define_sta_anchor' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'ao_style' ) );
+		add_action( 'wp_head', array( $this, 'ao_style' ) );
 	}
 
 	public function define_sta_anchor( $atts, $content = null ) {
@@ -33,14 +33,13 @@ class Shortcode {
 		return $html;
 	}
 
-	public function ao_style() {
-		$out  = '<style id="anchors-only">';
-		$out .= 'html { scroll-behavior: smooth; } ';
-		$out .= '@media (prefers-reduced-motion: reduce) {
-		html { scroll-behavior: auto; }
-		}';
-		$out .= '</style>';
-
-		echo $out;
+	public function ao_style() { ?>
+		<style id="anchors-only">
+		html { scroll-behavior: smooth; }
+		@media (prefers-reduced-motion: reduce) {
+			html { scroll-behavior: auto; }
+		}
+		</style>
+		<?php
 	}
 }

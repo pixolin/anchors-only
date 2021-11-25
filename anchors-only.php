@@ -15,23 +15,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Run this plugin only if plugin Scroll-to-Anchor has been deactivated
- *
- * @return void
- */
-
-
-
 define( 'AO_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 
-require_once AO_PLUGIN_PATH . 'includes/class-shortcode.php';
-require_once AO_PLUGIN_PATH . 'includes/class-tinymce.php';
+//Run this plugin only if plugin Scroll-to-Anchor has been deactivated
+require_once ABSPATH . 'wp-admin/includes/plugin.php';
+if ( ! is_plugin_active( 'scroll-to-anchor/scroll-to-anchor.php' ) ) {
 
-function check_some_other_plugin() {
-	if ( ! is_plugin_active( 'scroll-to-anchor/scroll-to-anchor.php' ) ) {
-		$anchors = new Shortcode();
-		$editor  = new TinyMCE();
-	}
+	require_once AO_PLUGIN_PATH . 'includes/class-shortcode.php';
+	require_once AO_PLUGIN_PATH . 'includes/class-tinymce.php';
+
+	$anchors = new Shortcode();
+	$editor  = new TinyMCE();
+
 }
-add_action( 'admin_init', 'check_some_other_plugin' );
