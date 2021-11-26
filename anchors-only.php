@@ -5,7 +5,7 @@
  * Description:     Ersetzt <em>Scroll to Anchor</em> und zeigt nur die Anker.
  * Author:          Bego Mario Garde
  * Author URI:      https://pixolin.de
- * Version:         0.1.0
+ * Version:         0.1.1
  *
  * @package         Anchors_Only
  */

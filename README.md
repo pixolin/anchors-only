@@ -1,13 +1,13 @@
 # Anchors Only #
-**Contributors:** @pixolin  
-**Donate link:** https://example.com/  
-**Tags:** anchors  
-**Requires at least:** 4.5  
-**Tested up to:** 5.8.2  
-**Requires PHP:** 5.6  
-**Stable tag:** 0.1.0  
-**License:** GPLv2 or later  
-**License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
+**Contributors:** @pixolin
+**Donate link:** https://example.com/
+**Tags:** anchors
+**Requires at least:** 4.5
+**Tested up to:** 5.8.2
+**Requires PHP:** 5.6
+**Stable tag:** 0.1.1
+**License:** GPLv2 or later
+**License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
 Ersetzt das Plugin *Scroll to Anchor*.
 
