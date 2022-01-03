@@ -39,6 +39,8 @@ Die Funktionen des Plugins sind nur dann aktiv, wenn das Plugin
 *Scroll to Anchor*  deaktiviert oder gelöscht wurde.
 
 == Changelog ==
+= 0.1.1 =
+Überflüssige Dateien entfernt
 
 = 0.1.0 =
 Erster Release
